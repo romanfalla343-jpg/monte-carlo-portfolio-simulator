@@ -2,14 +2,14 @@
 Monte Carlo Portfolio Risk Simulator
 =====================================
 Simulates portfolio return distributions using Monte Carlo methods.
-Computes Value at Risk (VaR), Conditional VaR (CVaR), Sharpe Ratio,
-and optimal portfolio weights via mean-variance optimisation.
+Computes Value at Risk (VaR), Conditional VaR (CVaR) and Sharpe Ratio, and
+plots a random-portfolio approximation of the efficient frontier.
 
 Author: Roman Falla
 GitHub: github.com/romanfalla343-jpg
 
 Dependencies:
-    pip install yfinance pandas numpy matplotlib scipy
+    pip install yfinance pandas numpy matplotlib
 
 Usage:
     python monte_carlo_portfolio_simulator.py
@@ -89,7 +89,7 @@ def compute_returns(prices: pd.DataFrame) -> pd.DataFrame:
 def run_monte_carlo(returns: pd.DataFrame, weights: np.ndarray,
                     config: dict) -> dict:
     """
-    Simulate portfolio paths using correlated Geometric Brownian Motion.
+    Simulate portfolio paths using correlated normal daily returns (arithmetic, compounded).
     Uses Cholesky decomposition to preserve asset correlations.
     """
     n_assets  = len(weights)
@@ -183,7 +183,7 @@ def run_monte_carlo(returns: pd.DataFrame, weights: np.ndarray,
 
 def compute_efficient_frontier(mu_annual: np.ndarray, cov: np.ndarray,
                                 rf: float, n_ports: int) -> pd.DataFrame:
-    """Generate random portfolio weights to approximate the efficient frontier."""
+    """Scatter of random (Dirichlet) portfolios approximating the efficient frontier. No optimiser is run."""
     n_assets = len(mu_annual)
     results  = np.zeros((n_ports, 3 + n_assets))
 
