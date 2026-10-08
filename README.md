@@ -26,16 +26,16 @@ The simulated portfolio contains five FTSE 100 stocks:
 
 ## Sample Output
 
-Sample results from a May 2026 run:
+Results from an 8 October 2026 run:
 
 | Metric                |    Value |
 | --------------------- | -------: |
-| Annualised Return     |   10.94% |
-| Annualised Volatility |   12.75% |
-| Sharpe Ratio          |     0.51 |
-| VaR (95%, 1yr)        |  £10,218 |
-| CVaR (95%, 1yr)       |  £14,617 |
-| Median Terminal Value | £110,424 |
+| Annualised Return     |   13.69% |
+| Annualised Volatility |   12.74% |
+| Sharpe Ratio          |     0.72 |
+| VaR (95%, 1yr)        |   £7,697 |
+| CVaR (95%, 1yr)       |  £12,220 |
+| Median Terminal Value | £113,556 |
 
 ## Methodology
 
@@ -54,7 +54,7 @@ pip install yfinance pandas numpy matplotlib
 python monte_carlo_portfolio_simulator.py
 ```
 
-## Example Output
+## Output
 
 ![Monte Carlo Portfolio Dashboard](monte_carlo_results_2026-10-08.png)
 
