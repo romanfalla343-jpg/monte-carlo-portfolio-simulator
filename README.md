@@ -28,3 +28,7 @@ Simulates portfolio return distributions using Monte Carlo methods on real FTSE 
 ```bash
 pip install yfinance pandas numpy matplotlib
 python monte_carlo_portfolio_simulator.py
+
+## Example Output
+
+![Monte Carlo Portfolio Dashboard](monte_carlo_results_2026-10-08.png)
