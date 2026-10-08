@@ -2,6 +2,8 @@
 
 Simulates portfolio return distributions using Monte Carlo methods on real FTSE 100 data.
 
+**Disclaimer:** This project is for educational and portfolio purposes only and does not constitute investment advice.
+
 ## What it does
 
 * Pulls 3 years of current historical price data via Yahoo Finance API
